@@ -4,6 +4,7 @@
 - name: Demo on Filters
   hosts: local
   connection: local
+  gather_facts: no
   vars:
     topics: linux, shell, ansible, terraform
     tagsMap:
