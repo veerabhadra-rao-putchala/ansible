@@ -55,9 +55,10 @@
         var: students_yaml | type_debug
   
   - name: conver YAML to JSON
-    ansible.builtin.debug:
+    #ansible.builtin.debug:
       #msg: "{{ students_yaml | to_nice_json }}"
-      var: students_yaml | to_nice_json
+    debug:
+      var: students_yaml
 
 
 
