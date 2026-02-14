@@ -7,6 +7,7 @@
   gather_facts: no
   vars:
     topics: linux, shell, ansible, terraform
+    course: "Devops with Ansible"
     tagsMap:
       name: ansible
       project: roboshop
@@ -60,8 +61,13 @@
     debug:
       var: students_yaml
 
+  - name: convert to upper case
+    ansible.builtin.debug:
+      msg: "{{ course | upper }}"
 
-
+  - name: convert to lower case
+    ansible.builtin.debug:
+        msg: "{{ course | lower }}"
 
 
 
