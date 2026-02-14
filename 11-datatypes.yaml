@@ -17,8 +17,12 @@
     - name: print variables
       ansible.builtin.debug:
         msg: |
-          "Program: {{ PROGRAM | join('\n') }}"
+          Program: {{ PROGRAM }}
+
           Duratin: {{ DURATION }}
+
           Is_live?: {{ IS_LIVE }}
+
           Details: {{ DETAILS }}
+          
           Topics: {{ TOPICS }}
