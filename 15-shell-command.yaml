@@ -1,0 +1,22 @@
+- name: ansible comamnd vs shell module
+  hosts: local
+  connection: local
+
+  tasks:
+  - name: command module test
+    #ansible.builtin.command: cat /etc/passwd | grep root
+    ansible.builtin.shell: cat /etc/passwd | grep root
+    register: users_output   # command output is saved in register variable
+  
+  - name: print output
+    ansible.builtin.debug:
+      msg: "Print users Ouput: {{ users_output }}"
+  
+  
+
+
+
+
+
+
+  
