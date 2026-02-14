@@ -50,7 +50,7 @@
       #students_yaml: "{{ lookup('file', 'students.yaml') }}"
 
   - name: Check datatype
-      debug:
+    debug:
         var: students_yaml | type_debug
   
   - name: conver YAML to JSON
