@@ -49,7 +49,7 @@
   
   - name: conver YAML to JSON
     ansible.builtin.debug:
-      msg: "{{ students_yaml | to_nice_json }}"
+      var: students_yaml | to_nice_json 
 
 
 
