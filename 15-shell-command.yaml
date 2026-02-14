@@ -19,7 +19,7 @@
   - name: print files.txt  
     ansible.builtin.debug:
       msg: "{{ files_output }}"
-    
+
 
 
 
