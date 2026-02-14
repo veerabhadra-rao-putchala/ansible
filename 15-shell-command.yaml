@@ -16,9 +16,11 @@
     ansible.builtin.shell: ls -ltr > files.txt
     register: files_output 
   
-  - name: print files output
+  - name: saving outputfile files.txt 
     ansible.builtin.command: cat files.txt
     register: outputfile
+
+  - name: print files.txt  
     ansible.builtin.debug:
       msg: "{{ outputfile }}"
     
