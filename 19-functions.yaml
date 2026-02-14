@@ -1,0 +1,14 @@
+# In ansible functions are Filters
+# VAR_NAME | FILTER_NAME
+
+- name: Demo on Filters
+  hosts: local
+  connection: local
+  tasks:
+  - name: Greeting
+    ansible.builtin.debug:
+      msg: "Hi sivakumar, {{ Greeting }}"
+
+
+
+
